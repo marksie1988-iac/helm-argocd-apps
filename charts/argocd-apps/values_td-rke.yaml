@@ -15,11 +15,3 @@ apps:
   repo:
     url: https://github.com/marksie1988-iac/helm-cluster.git
     path: charts/k8s-dashboard
-
-- name: cert-manager
-  namespace: cert-manager
-  valueFiles:
-  - values_td-rke.yaml
-  repo:
-    url: https://github.com/marksie1988-iac/helm-cluster.git
-    path: charts/cert-manager
