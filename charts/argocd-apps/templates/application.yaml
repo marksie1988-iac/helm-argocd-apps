@@ -12,7 +12,7 @@ spec:
   source:
     helm:
       valueFiles:
-      {{- toYaml .valueFiles | nindent 8 }}
+      {{- toYaml .valueFiles | indent 8 }}
     path: {{ .repo.path }}
     repoURL: {{ .repo.url }}
     targetRevision: {{ default "main" .repo.revision }}
