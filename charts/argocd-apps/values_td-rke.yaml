@@ -1,5 +1,5 @@
 apps:
-- name: argocd-apps
+- name: helm-argocd-apps
   namespace: argocd
   valueFiles:
   - values_td-rke.yaml
