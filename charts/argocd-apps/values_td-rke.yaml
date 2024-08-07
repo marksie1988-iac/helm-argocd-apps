@@ -51,3 +51,15 @@ apps:
 #  repo:
 #    url: https://github.com/marksie1988-iac/helm-vault.git
 #    path: .
+
+
+
+# User Apps
+
+- name: excalidraw
+  namespace: prd
+  valueFiles:
+    - values_td-rke.yaml
+  repo:
+    url: https://github.com/marksie1988-iac/helm-apps.git
+    path: charts/excalidraw
