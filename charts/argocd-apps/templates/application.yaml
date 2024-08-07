@@ -16,5 +16,9 @@ spec:
     path: {{ .repo.path }}
     repoURL: {{ .repo.url }}
     targetRevision: {{ default "main" .repo.revision }}
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
 ---
 {{ end }}
