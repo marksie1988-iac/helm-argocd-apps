@@ -44,7 +44,6 @@ apps:
   repo:
     url: https://github.com/marksie1988-iac/helm-cluster.git
     path: charts/ingress-nginx
-#- name: vault
 #  namespace: vault
 #  valueFiles:
 #    - values_td-rke.yaml
@@ -56,10 +55,11 @@ apps:
 
 # User Apps
 
-#- name: excalidraw
-#  namespace: prd
-#  valueFiles:
-#    - values_td-rke.yaml
-#  repo:
-#    url: https://github.com/marksie1988-iac/helm-apps.git
-#    path: charts/excalidraw
+- name: excalidraw
+  #- name: vault
+  namespace: prd
+  valueFiles:
+  - values_td-rke.yaml
+  repo:
+    url: https://github.com/marksie1988-iac/helm-apps.git
+    path: charts/excalidraw
