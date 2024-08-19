@@ -44,19 +44,19 @@ apps:
   repo:
     url: https://github.com/marksie1988-iac/helm-cluster.git
     path: charts/ingress-nginx
-#  namespace: vault
-#  valueFiles:
-#    - values_td-rke.yaml
-#  repo:
-#    url: https://github.com/marksie1988-iac/helm-vault.git
-#    path: .
-
-
+- name: argo-ingress
+  namespace: argocd
+  valueFiles:
+  - values.yaml
+  repo:
+    url: https://github.com/marksie1988-iac/helm-cluster.git
+    path: charts/argo-ingress
 
 # User Apps
 
 - name: excalidraw
   #- name: vault
+
   namespace: prd
   valueFiles:
   - values_td-rke.yaml
